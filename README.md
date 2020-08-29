@@ -2,6 +2,7 @@
 my mac dotfiles
 
 https://www.jianshu.com/p/2822a1899f95
+https://www.atlassian.com/git/tutorials/dotfiles
 
 Github 上的 Dotfiles 管理
 在使用 Linux 和 Mac 系统时候， 常常需要同步 dotfiles。比如 fish 的配置文件在 ~/.config/fish/config.fish，vim 的配置文件在 ~/.vim/vimrc 等等。Github 有个 非官方指南 。
