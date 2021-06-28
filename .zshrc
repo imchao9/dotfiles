@@ -97,10 +97,11 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias go="git-open"
+#alias go="git-open"
 alias rm="trash"
 alias ls='gls --color=auto'
 alias gfw='proxychains4'
+alias dc='docker-compose'
 
 if brew list | grep coreutils > /dev/null ; then
     PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
@@ -113,3 +114,17 @@ export CLICOLOR=1
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/zhangjunchao/.sdkman"
 [[ -s "/Users/zhangjunchao/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/zhangjunchao/.sdkman/bin/sdkman-init.sh"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Set go path
+export GOPATH=$HOME/go
+
+# Android Studio
+export ANDROID_HOME=/Users/$USER/Library/Android/sdk
+export ANDROID_SDK_ROOT=$ANDROID_HOME
+PATH="$PATH:$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools"
+PATH=$PATH:/usr/local/mysql/bin
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_261.jdk/Contents/Home
